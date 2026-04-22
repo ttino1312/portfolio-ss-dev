@@ -190,16 +190,16 @@
     @media(max-width:768px) {
       .nav-links { display:none; }
       .hamburger { display:flex; flex-direction:column; justify-content:center; }
-      .hero { min-height:100dvh; }
-      .hero-inner { padding:8rem 1.5rem 4rem; justify-content:center; }
-      .hero-left { gap:1.5rem; }
+      .hero { min-height:100dvh; display:flex; flex-direction:column; justify-content:center; }
+      .hero-inner { padding:8rem 1.25rem 4rem; justify-content:flex-start; min-height:auto; margin-top:5vh; }
+      .hero-left { gap:1.25rem; }
       .line { overflow:visible; }
       .line-inner { transform:none !important; opacity:1 !important; animation:none !important; }
       .hero-p, .hero-cta { opacity:1 !important; transform:none !important; animation:none !important; }
-      .eyebrow { opacity:1 !important; transform:none !important; animation:none !important; }
-      .hero-h1 { font-size:clamp(2.5rem,12vw,3.5rem); line-height:1; }
-      .hero-p { max-width:100%; font-size:1rem; }
-      .hero-cta { flex-direction:column; align-items:stretch; gap:1rem; }
+      .eyebrow { opacity:1 !important; transform:none !important; animation:none !important; margin-bottom:0.5rem; }
+      .hero-h1 { font-size:clamp(2.5rem,11vw,3.5rem); line-height:1; margin-bottom:0.5rem; }
+      .hero-p { max-width:100%; font-size:1.05rem; }
+      .hero-cta { flex-direction:column; align-items:stretch; gap:1rem; margin-top:1rem; }
       .hero-cta .btn { width:100%; justify-content:center; }
       .eyebrow span { font-size:0.6rem; letter-spacing:0.15em; }
       .orb-1 { width:250px; height:250px; }
@@ -243,8 +243,22 @@
 
 <!-- Navbar -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle; margin-right:4px;"><path d="M12 20a4 4 0 0 1-4-4v-4a4 4 0 0 0-4-4H2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v4a4 4 0 0 0 4 4h2a4 4 0 0 1-4 4Z"/><circle cx="17" cy="8" r="1" fill="var(--red)" stroke="none"/></svg>
+  <a href="#" class="nav-logo" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" style="display:flex;align-items:center;gap:0.5rem">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Robot Head -->
+      <rect x="5" y="7" width="14" height="10" rx="3" fill="var(--surface)"/>
+      <circle cx="9" cy="11" r="1.5" fill="var(--text)"/>
+      <circle cx="15" cy="11" r="1.5" fill="var(--text)"/>
+      <path d="M10 14h4" stroke="var(--text)"/>
+      <!-- Robot Antenna -->
+      <path d="M12 7V3"/>
+      <circle cx="12" cy="2" r="1"/>
+      <circle cx="6" cy="4" r="1" fill="var(--text)" stroke="none"/>
+      <!-- Snake wrapping -->
+      <path d="M4 14C2 14 1 12 2 10C3 8 7 8 8 10C9 12 12 18 16 18C20 18 22 15 21 12" stroke="var(--green)" stroke-width="2"/>
+      <!-- Snake Eye -->
+      <circle cx="3.5" cy="10" r="0.5" fill="var(--red)" stroke="none"/>
+    </svg>
     S&S <i>Dev</i>
   </a>
   <div class="nav-links">
